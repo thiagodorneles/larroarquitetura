@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: morrisoncole/pr-lint-action@v1.3.0
         with:
-          title-regex: "^(PPMPLPR-\d+:|hotfix).+"
+          title-regex: "^(PPMPLPR-\\d+:|hotfix).+"
           on-failed-regex-fail-action: false
           on-failed-regex-create-review: true
           on-failed-regex-comment:
