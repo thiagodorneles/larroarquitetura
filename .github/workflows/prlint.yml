@@ -1,0 +1,18 @@
+name: PR Lint
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  pr-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: morrisoncole/pr-lint-action@v1.3.0
+        with:
+          title-regex: "^(PPMPLPR-\d+:|hotfix).+"
+          on-failed-regex-fail-action: false
+          on-failed-regex-create-review: true
+          on-failed-regex-comment:
+            "PR title is invalid"
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
