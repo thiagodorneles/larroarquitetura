@@ -11,7 +11,7 @@ jobs:
       - uses: morrisoncole/pr-lint-action@v1.3.0
         with:
           title-regex: "^(PPMPLPR-\\d+:|hotfix).+"
-          on-failed-regex-fail-action: false
+          on-failed-regex-fail-action: true
           on-failed-regex-create-review: true
           on-failed-regex-comment:
             "PR title is invalid"
