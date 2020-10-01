@@ -20,7 +20,7 @@ jobs:
   labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: jesusvasquez333/verify-pr-label-action@v1.2.0
+      - uses: yashhy/pr-label-check-and-comment-action@master
         with:
-          valid-labels: 'bug, feature, refactor, docs'
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
+          required_labels: 'bug, docs, refactor, feature'
+          GITHUB_TOKEN: '${{secrets.GITHUB_TOKEN}}'
